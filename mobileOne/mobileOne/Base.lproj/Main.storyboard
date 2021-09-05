@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mobileOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="top" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1l-uI-ekg">
+                                <rect key="frame" x="10.5" y="59" width="393" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="164" translatesAutoresizingMaskIntoConstraints="NO" id="Wt2-hN-yrb">
+                                <rect key="frame" x="76" y="117" width="262" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPp-hw-Gli">
+                                        <rect key="frame" x="0.0" y="0.0" width="35" height="30"/>
+                                        <state key="normal" title="Hello"/>
+                                        <connections>
+                                            <action selector="buttonOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iix-hN-qPf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dck-uu-rT7">
+                                        <rect key="frame" x="199" y="0.0" width="63" height="30"/>
+                                        <state key="normal" title="GoodBye"/>
+                                        <connections>
+                                            <action selector="buttonOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vGV-6E-Plg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="catgirlOne" translatesAutoresizingMaskIntoConstraints="NO" id="oVX-4R-S11">
+                                <rect key="frame" x="20" y="165" width="379" height="670"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oVX-4R-S11" secondAttribute="height" multiplier="179:308" constant="-10.383116883116941" id="Wlb-E4-mSF"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="d1l-uI-ekg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="0M0-Md-0MZ"/>
+                            <constraint firstItem="Wt2-hN-yrb" firstAttribute="top" secondItem="d1l-uI-ekg" secondAttribute="bottom" constant="8" id="Alf-Pr-9vS"/>
+                            <constraint firstItem="Wt2-hN-yrb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="73" id="Dvz-Sf-T71"/>
+                            <constraint firstItem="oVX-4R-S11" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="2.5" id="FwJ-Ss-4OL"/>
+                            <constraint firstItem="d1l-uI-ekg" firstAttribute="width" secondItem="Wt2-hN-yrb" secondAttribute="width" multiplier="1.5" id="Ghq-Oe-s3X"/>
+                            <constraint firstItem="oVX-4R-S11" firstAttribute="top" secondItem="Wt2-hN-yrb" secondAttribute="bottom" constant="20" id="TvS-wM-Tsw"/>
+                            <constraint firstItem="Wt2-hN-yrb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="U3Y-yu-Uhi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oVX-4R-S11" secondAttribute="bottom" constant="27" id="arF-uz-hgf"/>
+                            <constraint firstItem="oVX-4R-S11" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="dBM-b9-TPR"/>
+                            <constraint firstItem="oVX-4R-S11" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Wt2-hN-yrb" secondAttribute="bottom" priority="20" constant="18" id="fft-dt-E5i"/>
+                            <constraint firstItem="d1l-uI-ekg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oRq-hV-EDJ"/>
+                            <constraint firstItem="Wt2-hN-yrb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="peE-jb-B1P"/>
+                            <constraint firstItem="oVX-4R-S11" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="121" id="qJ8-TQ-AZ5"/>
+                            <constraint firstItem="oVX-4R-S11" firstAttribute="width" secondItem="Wt2-hN-yrb" secondAttribute="width" multiplier="1.3" id="wl2-EZ-yL2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="U3Y-yu-Uhi"/>
+                                <exclude reference="TvS-wM-Tsw"/>
+                                <exclude reference="dBM-b9-TPR"/>
+                                <exclude reference="wl2-EZ-yL2"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imagContent" destination="oVX-4R-S11" id="lZp-JM-s0j"/>
+                        <outlet property="text" destination="d1l-uI-ekg" id="97o-1t-9F4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="catgirlOne" width="1206" height="2048"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
