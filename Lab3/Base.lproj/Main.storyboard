@@ -1,24 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lab3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dnv-94-p4B">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WmY-b7-Vnj">
+                                <rect key="frame" x="5" y="74" width="404" height="758"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="DM7-E0-GVV">
+                                        <rect key="frame" x="0.0" y="0.0" width="404" height="114"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="528" verticalHuggingPriority="252" horizontalCompressionResistancePriority="1000" text="ChangePicture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFZ-8l-Mzx">
+                                                <rect key="frame" x="0.0" y="0.0" width="404" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3A7-fm-AGW">
+                                                <rect key="frame" x="0.0" y="24.5" width="404" height="32"/>
+                                                <segments>
+                                                    <segment title="First"/>
+                                                    <segment title="Second"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="changePic:" destination="BYZ-38-t0r" eventType="valueChanged" id="fUj-Py-Z6E"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Made by Mr. Zhang" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFV-j3-3Zl">
+                                                <rect key="frame" x="0.0" y="59.5" width="404" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qGN-Qt-BCB">
+                                                <rect key="frame" x="-2" y="84" width="408" height="31"/>
+                                            </slider>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wqm-xR-cTk">
+                                        <rect key="frame" x="0.0" y="134" width="404" height="573"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="260" horizontalCompressionResistancePriority="250" text="CatGirlOne" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncc-cm-ln8">
+                                                <rect key="frame" x="0.0" y="0.0" width="404" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="249" horizontalCompressionResistancePriority="242" verticalCompressionResistancePriority="249" image="catGirlTwo" highlightedImage="catGirlOne" translatesAutoresizingMaskIntoConstraints="NO" id="pxG-Or-dxc">
+                                                <rect key="frame" x="0.0" y="19.5" width="404" height="553.5"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Mkk-N4-thb">
+                                        <rect key="frame" x="0.0" y="727" width="404" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capitalization" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQg-48-rTq">
+                                                <rect key="frame" x="0.0" y="0.0" width="274" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XiP-UM-42R">
+                                                <rect key="frame" x="274" y="0.0" width="132" height="31"/>
+                                                <connections>
+                                                    <action selector="changeFont:" destination="BYZ-38-t0r" eventType="valueChanged" id="mbi-kZ-nVc"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                        <variation key="heightClass=compact-widthClass=regular" axis="vertical" distribution="fillEqually"/>
+                                    </stackView>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jCb-Zw-xxC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WmY-b7-Vnj" firstAttribute="leading" secondItem="jCb-Zw-xxC" secondAttribute="leading" constant="5" id="EI5-eL-RMr"/>
+                            <constraint firstItem="jCb-Zw-xxC" firstAttribute="bottom" secondItem="WmY-b7-Vnj" secondAttribute="bottom" constant="30" id="IBO-dj-rTe"/>
+                            <constraint firstItem="WmY-b7-Vnj" firstAttribute="top" secondItem="jCb-Zw-xxC" secondAttribute="top" constant="30" id="Mm2-Eu-L75"/>
+                            <constraint firstItem="jCb-Zw-xxC" firstAttribute="trailing" secondItem="WmY-b7-Vnj" secondAttribute="trailing" constant="5" id="SYt-8U-Qer"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="c_picture" destination="OFZ-8l-Mzx" id="ZEL-4G-pIg"/>
+                        <outlet property="c_zhang" destination="hFV-j3-3Zl" id="CdB-aT-Xjb"/>
+                        <outlet property="cap_name" destination="KQg-48-rTq" id="YtL-S6-k9C"/>
+                        <outlet property="capital" destination="XiP-UM-42R" id="Fu0-z9-HJd"/>
+                        <outlet property="cart_girl" destination="ncc-cm-ln8" id="2Nl-H9-dCy"/>
+                        <outlet property="image" destination="pxG-Or-dxc" id="Al4-xI-rCf"/>
+                        <outlet property="segmen" destination="3A7-fm-AGW" id="fFa-Ux-uwS"/>
+                    </connections>
+                </viewController>
             </objects>
+            <point key="canvasLocation" x="15.942028985507248" y="76.339285714285708"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="catGirlOne" width="1206" height="2048"/>
+        <image name="catGirlTwo" width="172" height="293"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
