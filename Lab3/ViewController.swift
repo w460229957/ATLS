@@ -28,12 +28,14 @@ class ViewController: UIViewController {
     @IBAction func changePic(_ sender:UISegmentedControl!) {
         if(segmen.selectedSegmentIndex == 0){
             image.image = UIImage(named: "catGirlOne")
+            cart_girl.text = "catGirl One";
         }
         else{
             image.image = UIImage(named: "catGirlTwo")
+            cart_girl.text = "catGirl Two";
         }
     }
-    func changeFont_Color(_ input:UILabel?,_ condExpr:Int){
+    func changeCap_Color(_ input:UILabel?,_ condExpr:Int){
             if(condExpr == 0){
                 input?.text = input?.text?.lowercased();
                 input!.textColor = UIColor.systemYellow;
@@ -45,18 +47,24 @@ class ViewController: UIViewController {
     }
     @IBAction func changeFont(_ sender: UISwitch!) {
         if(sender.isOn){
-            changeFont_Color(c_picture,1);
-            changeFont_Color(c_zhang,1);
-            changeFont_Color(cart_girl,1);
-            changeFont_Color(cap_name,1);
+            changeCap_Color(c_picture,1);
+            changeCap_Color(c_zhang,1);
+            changeCap_Color(cart_girl,1);
+            changeCap_Color(cap_name,1);
         }
         else{
-            changeFont_Color(c_picture,0);
-            changeFont_Color(c_zhang,0);
-            changeFont_Color(cart_girl,0);
-            changeFont_Color(cap_name,0);
+            changeCap_Color(c_picture,0);
+            changeCap_Color(c_zhang,0);
+            changeCap_Color(cart_girl,0);
+            changeCap_Color(cap_name,0);
         }
     }
     
+    @IBAction func changeSize(_ sender: UISlider!) {
+        let fetch_value:Float = sender.value;
+        let text_shown = CGFloat(fetch_value);
+        c_picture.font = UIFont.systemFont(ofSize: text_shown);
+        
+    }
 }
 
