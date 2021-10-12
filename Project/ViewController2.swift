@@ -12,6 +12,8 @@ class ViewController2: UIViewController,UITextFieldDelegate{
     var timer:Timer?
     @IBOutlet weak var button: UIButton!
     
+    @IBOutlet weak var reminder: UILabel!
+    
     @IBOutlet weak var answerfield: UITextField!
     
     @IBOutlet weak var textTitle: UIStackView!
@@ -99,6 +101,10 @@ class ViewController2: UIViewController,UITextFieldDelegate{
     }
     
     func CheckIfRight(CorrectAnswer str1:String,UserAnswer str2:String)->Bool{
+        reminder.isHidden = false
+        reminder.text = "last question---correct Answer: \(str1) your Answer:\(str2)"
+        print(str1)
+        print(str2)
         if(str1 == str2){
             return true
         }
@@ -116,8 +122,9 @@ class ViewController2: UIViewController,UITextFieldDelegate{
         hideTextField()
         answerfield.text! = ""
         showNumberField()
+        print(result)
         numberField.text = "Your final score is \(round((Double(result)/30)*100))"
-        
+        reminder.isHidden = true
         
     }
     
@@ -129,6 +136,7 @@ class ViewController2: UIViewController,UITextFieldDelegate{
         var answerset = ConcentrationTest.revertNumber(testset)
         var time = 0
         var flag:Bool = true
+        var firstTry = true
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: {
             timer in
             time -= 1
@@ -140,23 +148,35 @@ class ViewController2: UIViewController,UITextFieldDelegate{
                             self.showTextField()
                         }
                         else{
-                            flag = false
-                            time = 6
                             if(testset.count == 0){
                                 self.CalculateResultANDShow(self.totalScore)
                             }
                             else{
+                                flag = false
+                                time = 6
+                                if(firstTry){
+                                    firstTry = false
+                                    self.setNumberField(testset.last!)
+                                }
+                                else{
                                     if(self.CheckIfRight(CorrectAnswer: String(answerset.last!), UserAnswer: self.getTextField())){
                                         self.IncrementScore()
                                     }
-                                    self.setNumberField(testset.last!)
                                     testset = testset.dropLast()
                                     answerset = answerset.dropLast()
-                                    self.showNumberField()
-                                    self.hideTextField()
-                                    self.answerfield.text = ""
-                            }
+                                    if(testset.last == nil){
+                                        self.CalculateResultANDShow(self.totalScore)
+                                    }
+                                    else{
+                                        self.setNumberField(testset.last!)
+                                        self.showNumberField()
+                                        self.hideTextField()
+                                        self.answerfield.text = ""
+                                    }
 
+
+                                }
+                            }
                     }
                 }
 
@@ -170,8 +190,13 @@ class ViewController2: UIViewController,UITextFieldDelegate{
             sender.setTitle("Stop!", for: .normal)
             self.startTest()
         }
-        else{
+        else if(sender.currentTitle == "Restart!"){
             sender.setTitle("Start!", for: .normal)
+            numberField.text = ""
+            removeNumberField()
+        }
+        else{
+            sender.setTitle("Restart!", for: .normal)
             self.CalculateResultANDShow(self.totalScore)
         }
     }
