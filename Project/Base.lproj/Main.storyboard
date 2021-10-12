@@ -11,23 +11,100 @@
         <!--short memory-->
         <scene sceneID="KX5-J3-UlH">
             <objects>
-                <viewController title="short memory" id="XG5-kq-pye" sceneMemberID="viewController">
+                <viewController title="short memory" id="XG5-kq-pye" customClass="ViewController3" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gBO-BN-H3P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!!!!!!!!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzx-i9-tO1">
-                                <rect key="frame" x="182.5" y="437.5" width="49" height="21"/>
+                                <rect key="frame" x="182.5" y="438" width="49" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="catGirlTwo" translatesAutoresizingMaskIntoConstraints="NO" id="s9a-p7-unY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="s9a-p7-unY" secondAttribute="height" multiplier="414:769" id="cTp-TN-nks"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Short Memory Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhf-mD-g7A">
+                                <rect key="frame" x="106" y="131" width="204" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" systemColor="systemGray6Color"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="PLN-Py-om9">
+                                <rect key="frame" x="23" y="333" width="368" height="150"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ith-As-NP2">
+                                        <rect key="frame" x="0.0" y="0.0" width="368" height="82"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Short Memory Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsc-GD-6eF">
+                                                <rect key="frame" x="0.0" y="0.0" width="368" height="20.5"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(1)Remember each picture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6x-Yg-GbW">
+                                                <rect key="frame" x="0.0" y="20.5" width="368" height="20.5"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(2)You will need to type the picture code" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iqt-5e-vSU">
+                                                <rect key="frame" x="0.0" y="41" width="368" height="20.5"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(3)Test score = Correct answers/Total Questions" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a48-4A-Nft">
+                                                <rect key="frame" x="0.0" y="61.5" width="368" height="20.5"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bW1-uL-dW4">
+                                        <rect key="frame" x="0.0" y="101" width="368" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="tel"/>
+                                    </textField>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcr-h4-BFC">
+                                        <rect key="frame" x="0.0" y="101" width="368" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kK4-Bk-dwJ">
+                                        <rect key="frame" x="0.0" y="120" width="368" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" title="Start!">
+                                            <color key="titleColor" systemColor="systemIndigoColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startOrStop:" destination="Ffr-iP-ZzG" eventType="touchUpInside" id="myf-za-UTd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ws5-qI-8FX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ws5-qI-8FX" firstAttribute="trailing" secondItem="s9a-p7-unY" secondAttribute="trailing" id="2OK-J5-sZC"/>
                             <constraint firstItem="Rzx-i9-tO1" firstAttribute="centerX" secondItem="gBO-BN-H3P" secondAttribute="centerX" id="8BZ-rJ-QcM"/>
                             <constraint firstItem="Rzx-i9-tO1" firstAttribute="centerY" secondItem="gBO-BN-H3P" secondAttribute="centerY" id="DON-Wk-2Kg"/>
+                            <constraint firstItem="s9a-p7-unY" firstAttribute="leading" secondItem="ws5-qI-8FX" secondAttribute="leading" id="JtX-46-EgW"/>
+                            <constraint firstItem="s9a-p7-unY" firstAttribute="top" secondItem="ws5-qI-8FX" secondAttribute="top" id="QXi-CS-maV"/>
+                            <constraint firstItem="ws5-qI-8FX" firstAttribute="bottom" secondItem="s9a-p7-unY" secondAttribute="bottom" id="mM9-aA-TrB"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" image="square.and.arrow.down.on.square.fill" catalog="system" id="7tw-OH-Fsf"/>
@@ -259,6 +336,7 @@
     <resources>
         <image name="Image-18" width="640" height="360"/>
         <image name="catGirl" width="1206" height="2048"/>
+        <image name="catGirlTwo" width="172" height="293"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="posters" width="750" height="1000"/>
         <image name="square.and.arrow.down.on.square.fill" catalog="system" width="122" height="128"/>
