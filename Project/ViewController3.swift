@@ -146,7 +146,7 @@ class ViewController3: UIViewController,UITextFieldDelegate {
                                     break
                                 }
                             }
-                            self.numberField.text = "What is the order of this picture in the sequence?(First Occurence)"
+                            self.numberField.text = "What is the order of this picture in the sequence?(First Occurrence)"
                             self.imageArea.image = answerSet[correctID-1]
                             flag = true
                             time = 10

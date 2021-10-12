@@ -63,13 +63,13 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pj2-qp-her">
-                                        <rect key="frame" x="184" y="157.33333333333331" width="0.0" height="0.0"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pj2-qp-her">
+                                        <rect key="frame" x="95.666666666666686" y="157.33333333333331" width="177" height="0.0"/>
                                         <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="UyS-1b-plb"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
@@ -137,6 +137,9 @@
                                         <variation key="heightClass=compact-widthClass=regular" alignment="center" axis="horizontal" spacing="22"/>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Pj2-qp-her" firstAttribute="width" secondItem="SBr-pR-UXW" secondAttribute="width" multiplier="1.5" id="qHK-gh-TOB"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ws5-qI-8FX"/>
