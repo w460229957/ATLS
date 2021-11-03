@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Lab5</string>
+    <string name="hello">This is Lab 5!</string>
+    <string name="title">Lab5</string>
+    <string name="inputTitle">please enter your name</string>
+    <string name="figureName">Human</string>
+    <string name="button">button</string>
+    <string name="ImageDescription">A human</string>
+    <string name="substitute">Nothing</string>
+</resources>
