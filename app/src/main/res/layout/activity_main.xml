@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="48dp"
+            android:text="@string/Title"
+            android:textAlignment="center"
+            android:textColor="#004D40"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="626dp"
+            android:onClick="showResult"
+            android:text="@string/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header"
+            tools:ignore="UsingOnClickInXml" />
+
+
+        <TextView
+            android:id="@+id/intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:text="@string/introduction"
+            android:textAlignment="center"
+            android:textColor="#004D40"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/hairType"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp"
+            android:minHeight="48dp"
+            android:text="@string/hairType"
+            android:textColor="#004D40"
+            app:layout_constraintStart_toEndOf="@+id/checkBox1"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox1"
+            app:showText="false"
+            tools:ignore="TextContrastCheck" />
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:minHeight="48dp"
+            android:text="@string/breed1"
+            app:layout_constraintEnd_toStartOf="@+id/theGroup"
+            app:layout_constraintHorizontal_bias="0.754"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cheater"
+            tools:ignore="TextContrastCheck" />
+
+        <RadioGroup
+            android:id="@+id/theGroup"
+            android:layout_width="202dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/intro"
+            app:layout_constraintStart_toStartOf="@+id/intro"
+            app:layout_constraintTop_toBottomOf="@+id/intro">
+
+            <RadioButton
+                android:id="@+id/dog"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/dog"
+                android:textAlignment="center"
+                android:textColor="#004D40"
+                tools:ignore="TextContrastCheck" />
+
+            <RadioButton
+                android:id="@+id/cat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/cat"
+                android:textAlignment="center"
+                tools:ignore="TextContrastCheck" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/breed2"
+            android:textColor="#004D40"
+            app:layout_constraintEnd_toStartOf="@+id/checkBox3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/checkBox1"
+            app:layout_constraintTop_toTopOf="@+id/checkBox1"
+            tools:ignore="TextContrastCheck" />
+
+
+        <Spinner
+            android:id="@+id/cheater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:entries="@array/list"
+            android:minHeight="48dp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/theGroup"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/theGroup"
+            app:layout_constraintTop_toBottomOf="@+id/theGroup" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/bree3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/checkBox2"
+            app:layout_constraintTop_toTopOf="@+id/checkBox2"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/submitButton"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@+id/cheater"
+            app:layout_constraintStart_toStartOf="@+id/cheater"
+            app:layout_constraintTop_toBottomOf="@+id/hairType"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/hairdetail"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="@string/hairDesc"
+            android:textAlignment="viewStart"
+            android:textAllCaps="true"
+            android:textColor="#004D40"
+            app:layout_constraintBottom_toBottomOf="@+id/hairType"
+            app:layout_constraintEnd_toEndOf="@+id/checkBox3"
+            app:layout_constraintHorizontal_bias="0.59"
+            app:layout_constraintStart_toEndOf="@+id/hairType"
+            app:layout_constraintTop_toTopOf="@+id/hairType"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

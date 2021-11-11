@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Lab7</string>
+    <string name="Title">Lab7 pet breeds</string>
+    <string name="introduction">Please select your favorite kind</string>
+    <string name="breed1">breed1</string>
+    <string name="breed2">breed2</string>
+    <string name="feedChoice">cat</string>
+    <string name="bree3">bree3</string>
+    <string name="cat">cat</string>
+    <string name="dog">dog</string>
+    <string name="capitalization">capitalization</string>
+    <string name="button">showResult</string>
+    <string name="result">result</string>
+    <string name="hair">hair type</string>
+    <string name="hairType">hairType</string>
+    <string name="hairDesc">short hair</string>
+    <string-array name="list">
+        <item>"None"</item>
+        <item>"I love both animals"</item>
+    </string-array>
+</resources>
