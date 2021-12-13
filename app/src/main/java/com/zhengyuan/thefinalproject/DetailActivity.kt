@@ -167,7 +167,7 @@ class DetailActivity : AppCompatActivity() {
                         subSteps = subSteps.filter { step -> step.id != (getItem(position) as Substep).id}
                         this@DetailActivity.newTask.subSteps = subSteps//Call newTask variable in the outer class.
                         this.notifyDataSetChanged()//Tells the adapter to render the updated list content.(Like how React works)
-                }, 500)
+                }, 200)
             }
 
 

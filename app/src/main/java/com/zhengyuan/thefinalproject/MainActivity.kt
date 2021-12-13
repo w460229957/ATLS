@@ -171,7 +171,7 @@ class MainActivity : AppCompatActivity() {
                         }
                         this.notifyDataSetChanged()//Tells the adapter to render the updated list content.(Like how React works)
                     }
-                }, 500)
+                }, 200)
             }
 
 
