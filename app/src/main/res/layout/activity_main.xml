@@ -17,9 +17,10 @@
 
         <TextView
             android:id="@+id/projectTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/nothing"
+            android:textAlignment="center"
             android:textSize="34sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -29,13 +30,12 @@
 
         <ListView
             android:id="@+id/taskList"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginBottom="100dp"
             android:nestedScrollingEnabled="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/projectTitle"
-            app:layout_constraintHorizontal_bias="0.507"
             app:layout_constraintStart_toStartOf="@+id/projectTitle"
             app:layout_constraintTop_toBottomOf="@+id/projectTitle"
             app:layout_constraintVertical_bias="0.0">
